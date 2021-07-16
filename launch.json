@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build/Debug CPP file with gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Strawberry\\c\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true, 
+                }
+            ], 
+            "preLaunchTask": "g++: (CPP) Build for Debug"
+        },
+        {
+            "name": "Build/Run CPP file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Strawberry\\c\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true, 
+                }
+            ], 
+            "preLaunchTask": "g++: (CPP) Build"
+        }, 
+        {
+            "name": "Debug JS file with node", 
+            "type":"node", 
+            "request": "launch", 
+            "program": "${file}",
+            "stopOnEntry": true,
+            "args": [],
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+        }, 
+        {
+            "name": "Debug Python File", 
+            "type": "python", 
+            "request": "launch", 
+            "python": "${command:python.interpreterPath}", 
+            "program": "${file}",
+            "args": [], 
+            "stopOnEntry": true,
+            "cwd": "${workspaceFolder}", 
+            "console": "integratedTerminal", 
+        },
+    ]
+}
